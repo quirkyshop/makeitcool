@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx:
-    image: gscool/nginx
+    image: quirkyvar/nginx
     environment:
      - PORT=443
     depends_on:
@@ -11,7 +11,7 @@ services:
     links:
       - web:web
   web:
-    image: gscool/blog
+    image: quirkyvar/web
     ports:
      - "7001:7001"
     environment:
